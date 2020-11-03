@@ -1,0 +1,18 @@
+snippet_support = false
+verbosity = 2
+
+[server]
+# exit session if no requests were received during given period in seconds
+# works only in unix sockets mode (-s/--session)
+# set to 0 to disable
+timeout = 1800 # seconds = 30 minutes
+
+[language.rust]
+filetypes = ["rust"]
+roots = ["Cargo.toml"]
+command = "rls"
+
+#[language.zig]
+#filetypes = ["zig"]
+#roots = ["build.zig"]
+#command = "/home/charlie/programming/zls/zig-cache/bin/zls"
