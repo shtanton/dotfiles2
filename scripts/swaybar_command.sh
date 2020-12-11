@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/dash
 while :
 do
     date "+%Y-%m-%d %H-%M-%S"

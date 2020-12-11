@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/dash
 P=$(echo "web
 discord
 volume
