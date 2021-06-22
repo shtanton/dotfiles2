@@ -1,5 +1,5 @@
 #!/usr/bin/dash
-rsync -aAXv --delete-excluded --delete \
+rsync -aAXv --delete-excluded --delete --ignore-errors \
 --exclude /dev \
 --exclude /proc \
 --exclude /sys \
@@ -7,4 +7,4 @@ rsync -aAXv --delete-excluded --delete \
 --exclude /run \
 --exclude /mnt \
 --exclude /lost+found \
-/ charlie@192.168.0.19:/mnt/hdd/conorssd
+/ charlie@shtanton.xyz:~/conor/ssd

@@ -5,7 +5,8 @@ volume
 email
 terminal
 zoom
-steam" | menu.sh)
+steam
+firefox" | menu.sh)
 
 MOZ_ENABLE_WAYLAND=1
 QT_QPA_PLATFORM=wayland
@@ -13,7 +14,7 @@ SDL_VIDEODRIVER=wayland
 
 case $P in
     web)
-        firefox
+        netsurf
         ;;
     discord)
         discord
@@ -32,6 +33,9 @@ case $P in
         ;;
     steam)
         SDL_VIDEODRIVER=x11 TERM=xterm steam
+        ;;
+    firefox)
+        firefox
         ;;
     *)
         ;;

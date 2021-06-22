@@ -17,6 +17,8 @@ set $left h
 set $down j
 set $up k
 set $right l
+set $up2 bracketright
+set $down2 bracketleft
 # Your preferred terminal emulator
 set $term alacritty
 
@@ -98,6 +100,9 @@ input * xkb_layout "gb,us"
     # Run a script in alacritty
     bindsym $mod+s exec run_script.sh
 
+    bindsym $mod+a exec duckduckgo.sh
+    bindsym $mod+d exec web.sh
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -114,12 +119,18 @@ input * xkb_layout "gb,us"
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$down focus right
-    bindsym $mod+$up focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$left focus left
+    bindsym $mod+$right focus right
+    bindsym $mod+$up2 focus parent
+    bindsym $mod+$down2 focus child
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$down move right
-    bindsym $mod+Shift+$up move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$right move right
 #
 # Workspaces:
 #
@@ -153,11 +164,11 @@ input * xkb_layout "gb,us"
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    #bindsym $mod+b splith
-    #bindsym $mod+v splitv
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+z layout toggle splith tabbed
+    bindsym $mod+z layout toggle splith splitv tabbed stacking
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -175,13 +186,10 @@ input * xkb_layout "gb,us"
 #
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
+    bindsym $mod+minus scratchpad show
 
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+l scratchpad show
 #
 # Resizing containers:
 #
