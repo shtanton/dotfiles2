@@ -100,7 +100,8 @@ input * xkb_layout "gb,us"
     # Run a script in alacritty
     bindsym $mod+s exec run_script.sh
 
-    bindsym $mod+a exec duckduckgo.sh
+		bindsym $mod+a exec marginalia.sh
+    bindsym $mod+Shift+a exec duckduckgo.sh
     bindsym $mod+d exec web.sh
 
     # Drag floating windows by holding down $mod and left mouse button.
