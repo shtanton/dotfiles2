@@ -98,6 +98,7 @@ input * xkb_layout "gb,us"
     bindsym $mod+space exec launch.sh
 
     # Run a script in alacritty
+    bindsym $mod+Shift+Return exec run_script_terminal.sh
     bindsym $mod+s exec run_script.sh
 
 		bindsym $mod+a exec marginalia.sh
