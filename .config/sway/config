@@ -97,10 +97,8 @@ input * xkb_layout "gb,us"
     # Start your launcher
     bindsym $mod+space exec launch.sh
 
-    # Run a script in alacritty
-    # bindsym $mod+s exec run_script.sh
-
-    bindsym $mod+a exec duckduckgo.sh
+		bindsym $mod+a exec marginalia.sh
+    bindsym $mod+Shift+a exec duckduckgo.sh
     bindsym $mod+d exec web.sh
     bindsym $mod+s exec marginalia
 
