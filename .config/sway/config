@@ -97,9 +97,8 @@ input * xkb_layout "gb,us"
     # Start your launcher
     bindsym $mod+space exec launch.sh
 
-		bindsym $mod+a exec marginalia.sh
-    bindsym $mod+Shift+a exec duckduckgo.sh
-    bindsym $mod+d exec web.sh
+    bindsym $mod+a exec web.sh
+    bindsym $mod+d exec duckduckgo.sh
     bindsym $mod+s exec marginalia
 
     # Drag floating windows by holding down $mod and left mouse button.
