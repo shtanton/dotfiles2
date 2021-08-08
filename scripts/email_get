@@ -1,0 +1,8 @@
+#!/usr/bin/dash
+eval $(ssh-agent)
+ssh-add
+ssh -t charlie@shtanton.xyz "mpop -a"
+echo Downloading emails...
+rsync -rvt --delete --exclude=outbox charlie@shtanton.xyz:mail/ ~/mail
+rsync -rvt charlie@shtanton.xyz:mail/outbox/ ~/mail/outbox
+ssh-agent -k

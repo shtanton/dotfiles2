@@ -1,0 +1,2 @@
+#!/usr/bin/dash
+mpt "*.ox.ac.uk" "$@"

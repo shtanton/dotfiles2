@@ -1,0 +1,2 @@
+#!/usr/bin/dash
+rsync -rvt --delete ~/mail/ charlie@shtanton.xyz:mail

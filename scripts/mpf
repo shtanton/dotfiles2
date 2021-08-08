@@ -1,0 +1,4 @@
+#!/usr/bin/dash
+addr=$1
+shift
+mpick -t "from.addr~~\"$addr\"" "$@"

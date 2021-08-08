@@ -1,0 +1,2 @@
+#!/usr/bin/dash
+rsync -aAXHv --delete --ignore-errors charlie@shtanton.xyz:/mnt/hdd/ /mnt/hdd/backup

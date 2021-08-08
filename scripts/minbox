@@ -1,0 +1,2 @@
+#!/usr/bin/dash
+mlist "$@" ~/mail/INBOX | msort -d

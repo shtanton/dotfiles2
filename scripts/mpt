@@ -1,0 +1,4 @@
+#!/usr/bin/dash
+addr=$1
+shift
+mpick -t "to.addr~~\"$addr\"||\"Cc\".addr~~\"$addr\"" "$@"

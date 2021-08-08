@@ -1,0 +1,2 @@
+#!/usr/bin/dash
+mpt "gemini@lists.orbitalfox.eu" "$@"

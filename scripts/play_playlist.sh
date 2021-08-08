@@ -1,13 +1,14 @@
 #!/usr/bin/dash
 echo '{"command": ["quit"]}' | socat - /tmp/mpvsocket ;
 TARGET=$(echo "playlist
+new
 oxygene
 retrowave
 retrowave.one
 electroswing-radio
 drumandbass.fm" | menu.sh)
 case $TARGET in
-    playlist|oxygene|retrowave)
+    playlist|oxygene|retrowave|new)
         mpv --input-ipc-server=/tmp/mpvsocket --loop-playlist --no-audio-display --playlist="/home/charlie/music/playlists/$TARGET"
         ;;
     retrowave.one)
