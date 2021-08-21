@@ -36,7 +36,23 @@ map global surround q "<a-:>a'<esc>Hi'<esc>"
 map global surround g '<a-:>a`<esc>Hi`<esc>'
 
 hook global WinCreate ^[^*]+$ %{editorconfig-load}
-hook global WinSetOption filetype=(rust|zig) expandtab
+
+# 2 spaces instead of tabs for some languages
+define-command -hidden backspace-tabs %{
+	try %{
+		exec -draft h H <a-k><space><space><ret> d
+	} catch %{
+		exec <backspace>
+	}
+}
+hook global WinSetOption filetype=(rust|zig|haskell) %{
+	set-option buffer indentwidth 2
+	map buffer insert <backspace> '<a-;>:backspace-tabs<ret>'
+	hook buffer InsertChar \t %{
+		exec -draft h@
+	}
+}
+
 hook global InsertCompletionShow .* %{
 	map window insert <tab> <c-n>
 	map window insert <s-tab> <c-p>
