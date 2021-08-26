@@ -1,2 +1,3 @@
 #!/usr/bin/dash
 minbox "$@" | mseq -S
+mscan

@@ -1,0 +1,3 @@
+#!/usr/bin/dash
+mlist ~/mail/todo | msort -d | mseq -S
+mscan

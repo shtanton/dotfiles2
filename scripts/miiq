@@ -1,2 +1,3 @@
 #!/usr/bin/dash
-minc ~/mail/INBOX | msort -d | mseq -S
+minc ~/mail/INBOX >/dev/null
+miq
