@@ -1,0 +1,2 @@
+#!/usr/bin/dash
+parallel --jobs 1 cdparanoia -w {#} '{= $_=sprintf("%02d",seq()) =}'-{}.wav :::: -
