@@ -1,0 +1,5 @@
+#!/usr/bin/dash
+PERCENT_BRIGHTNESS=$1
+read MAX < /sys/class/backlight/intel_backlight/device/intel_backlight/max_brightness
+ACTUAL=$((($PERCENT_BRIGHTNESS * $MAX) / 100))
+echo $ACTUAL | sudo tee /sys/class/backlight/intel_backlight/device/intel_backlight/brightness
