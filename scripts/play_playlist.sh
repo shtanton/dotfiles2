@@ -26,7 +26,7 @@ case $TARGET in
 		mpv --input-ipc-server=/tmp/mpvsocket --no-audio-display ~/data/bbc_radio_1.pls
 		;;
 	"paste")
-		mpv --input-ipc-server=/tmp/mpvsocket --no-audio-display --vid=no $(wl-paste)
+		mpv --input-ipc-server=/tmp/mpvsocket --loop --no-audio-display --vid=no $(wl-paste)
 		;;
 	*)
 		;;

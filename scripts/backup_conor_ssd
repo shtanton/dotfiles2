@@ -5,4 +5,5 @@ DATETIME=$(date "+%F_%T")
 SERVER="charlie@shtanton.xyz"
 
 rsync -aAHXv --delete --delete-excluded --ignore-errors --exclude-from=/home/charlie/data/backup_exclude --link-dest="../latest" "${SRC}/" "${SERVER}:${DEST}/${DATETIME}"
-ssh $SERVER "update_latest ~/${DEST}/${DATETIME} ~/${DEST}/latest"
+# ssh $SERVER "update_latest ~/${DEST}/${DATETIME} ~/${DEST}/latest"
+echo You should set the latest link now
