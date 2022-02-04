@@ -7,7 +7,7 @@ set-option global indentwidth 0
 set-option global autoreload true
 set-option global toolsclient tools
 set-option global grepcmd 'rg --column'
-colorscheme gruvbox
+colorscheme gruvbox-dark
 
 eval %sh{kak-lsp --kakoune -s $kak_session}
 hook global WinSetOption filetype=(rust) %{
