@@ -100,6 +100,7 @@ input * xkb_layout "gb,us"
     bindsym $mod+a exec web.sh
     bindsym $mod+d exec duckduckgo.sh
     bindsym $mod+s exec marginalia
+    bindsym $mod+g exec run_script
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

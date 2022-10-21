@@ -1,0 +1,3 @@
+#!/usr/bin/dash
+P=$(cd ~/.password-store && find . -type f -and -not -path "./.git/*" -and -not -path "./.gpg-id" | sed 's_\./\(.*\)\.gpg_\1_' | menu.sh)
+gpg -q -d ~/.password-store/$P.gpg | wl-copy
